@@ -1,9 +1,14 @@
 {
   "name": "Golang Github Docs",
   "description": "Redirect Go package documentation links to github rather than cs.opensource.google",
-  "version": "1.0",
+  "version": "0.1.0",
   "manifest_version": 3,
-  "background": {
-    "scripts": "background.js"
-  }
+  "content_scripts": [
+    {
+      "matches": ["*://pkg.go.dev/*"],
+      "run_at": "document_idle",
+      "js": ["background.js"]
+    }
+  ],
+  "host_permissions":["*://pkg.go.dev/*"]
 }
