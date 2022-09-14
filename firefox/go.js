@@ -1,3 +1,8 @@
+// selectors:
+// 1. go.mod in the top right "Details" box
+// 2. links to types and functions in the center of the page
+// 3. "View all" link in the "Source Files" section at the bottom of the page
+// 4. file links in the "Source Files" section at the bottom of the page
 let links = document.querySelectorAll("ul.UnitMeta-details > li:first-child a, .Documentation-content a.Documentation-source, .UnitFiles-titleLink a, .UnitFiles-fileList a"); 
 for (let i = 0; i < links.length; i++) {
 	if (links[i].href.includes("go.mod")){
