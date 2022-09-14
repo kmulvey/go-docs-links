@@ -4,10 +4,6 @@
   "name": "Golang Github Docs",
   "version": "1.0",
   "homepage_url": "https://github.com/kmulvey/go-docs-links/",
-  "icons": {
-    "48": "icons/border-48.png"
-  },
-
   "content_scripts": [
     {
       "matches": ["*://pkg.go.dev/*"],
