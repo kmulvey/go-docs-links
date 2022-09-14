@@ -9,7 +9,6 @@ for (let i = 0; i < links.length; i++) {
   } 
 }
 
-// https://github.com/golang/go/blob/go1.19.1/src/go.mod
 function convertMod(link) {
   var url = link.split("/");
   var github = "https://github.com/golang/go/blob/";
@@ -35,14 +34,3 @@ function convertX(link) {
   github = github.replace('go;l=', 'go#L');
   return github;
 }
-
-/*
-// https://github.com/golang/go/blob/go1.19.1/src/net/http/client.go#L116
-// https://github.com/golang/tools/blob/v0.1.12/go/packages/packages.go#L42
-// https://github.com/golang/crypto/blob/master/bn256/constants.go
-
-console.log(convertX("https://cs.opensource.google/go/x/tools/+/v0.1.12:go/packages/packages.go;l=473"));
-console.log(convertX("https://cs.opensource.google/go/x/crypto/+/master:bn256/constants.go"));
-console.log(convertStd("https://cs.opensource.google/go/go/+/go1.19.1:src/net/http/client.go;l=919"));
-console.log(convertStd("https://cs.opensource.google/go/go/+/go1.19.1:src/go/ast/ast.go;l=456"));
-*/
